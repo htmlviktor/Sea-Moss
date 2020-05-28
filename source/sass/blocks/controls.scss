@@ -1,0 +1,60 @@
+.cotrols {
+  @include reset-list;
+  position: fixed;
+  margin-top: -85px;
+  top: 50%;
+  left: 6vw;
+
+  display: none; //Убираем отображения, чтобы кастомизировать от fullpage.js
+}
+
+.cotrols__item {
+  margin-bottom: 20px;
+  width: 10px;
+  height: 10px;
+}
+
+.controls__btn {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  border: none;
+  background-color: #000000;
+  border-radius: 50%;
+  outline: none;
+}
+
+.controls__btn--active {
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #000000;
+}
+
+@media (max-width: $desktop-width) {
+  .cotrols {
+    margin-top: -78px;
+    margin-right: 117%;
+  }
+
+  .cotrols__item {
+    margin-bottom: 12px;
+  }
+
+  .controls__btn {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: $laptop-width) {
+  .cotrols {
+    left: 0;
+    margin-left: -140px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .cotrols {
+    display: none;
+  }
+}

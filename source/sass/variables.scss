@@ -1,0 +1,28 @@
+//Template Colors
+//Можно добавлять цвета из темы
+$main-color-text: #000000;
+
+
+//Template breakpoints
+$mobile-width: 375px;
+$tablet-width: 760px;
+$laptop-width: 1024px;
+$desktop-width: 1280px;
+$desktop-large-width: 1500px;
+
+//Containers sizes
+$mobile-width-container: $mobile-width;
+$tablet-width-container: 700px;
+$laptop-width-container: 900px;
+$desktop-width-container: 1200px;
+
+//Template retina media
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+
+//Template Fonts for BODY
+$main-fonts: "Montserrat", "Arial", sans-serif;
+// $sec-fonts: "Montserrat", "Arial", sans-serif;
+$main-font-size: 20px;
+$main-font-weight: 400;

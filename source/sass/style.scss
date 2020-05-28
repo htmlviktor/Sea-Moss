@@ -1,0 +1,14 @@
+@import "fullpage.scss";
+@import "normalize.scss";
+@import "fonts.scss";
+@import "variables.scss";
+@import "mixin.scss";
+@import "scaffolding.scss";
+@import "blocks/header.scss";
+
+@import "blocks/controls.scss";
+
+//Тут остальные импорта
+@import "blocks/footer.scss";
+
+@import "custom.scss";

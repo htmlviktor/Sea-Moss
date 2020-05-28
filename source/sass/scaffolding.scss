@@ -1,0 +1,113 @@
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  font-family: $main-fonts;
+  font-size: $main-font-size;
+  font-weight: $main-font-weight;
+  color: $main-color-text;
+  line-height: 24px;
+
+  background-color: #ffffff;
+
+  @media (min-width: $desktop-large-width + 1) {
+    font-size: 30px;
+    line-height: 34px;
+  }
+}
+
+h1  {
+  font-family: $main-fonts;
+}
+
+a {
+  text-decoration: none;
+  color: $main-color-text;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 16px 38px;
+
+  @media (min-width: $desktop-large-width + 1) {
+    font-size: 20px;
+    padding: 25px 38px;
+  }
+}
+
+.slide {
+  height: 100vh;
+  box-sizing: border-box;
+  min-height: 720px;
+  position: relative;
+}
+
+//Описываем контейнер
+
+.container {
+  max-width: $desktop-width-container;
+  margin: 0 auto;
+}
+
+@media (max-width: $desktop-width) {
+  .container {
+    max-width: $laptop-width-container;
+  }
+
+  .slide {
+    min-height: 768px;
+  }
+
+  .button {
+    font-size: 13px;
+    line-height: 16px;
+    padding: 15px 38px;
+  }
+}
+
+@media (max-width: $laptop-width) {
+  .container {
+    max-width: $tablet-width-container;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .container {
+    max-width: $mobile-width-container;
+  }
+}
