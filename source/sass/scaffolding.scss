@@ -77,6 +77,12 @@ html {
   position: relative;
 }
 
+//Глобальный фон для всех секций
+.section {
+  background-image: url('../img/coral-bg.png');
+  background-size: cover;
+}
+
 //Описываем контейнер
 
 .container {

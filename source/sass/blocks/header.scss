@@ -1,0 +1,28 @@
+.header {
+    background-image: url('../img/header-bg.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.header__title {
+    font-size: 90px;
+}
+
+.header__description {
+    max-width: 500px;
+    letter-spacing: 0.04em;
+    font-size: 20px;
+}
+
+.header__link {
+    font-size: 25px;
+    text-decoration: underline;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.header__wrapper {
+    width: 100%;
+}

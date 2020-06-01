@@ -1,0 +1,15 @@
+.nav {
+    position: absolute;
+    top: 0;
+    left: calc(50% + 300px);
+    z-index: 1;
+}
+
+.nav__list {
+    @include reset-list;
+    display: flex;
+}
+
+.nav__link {
+    color: #ffffff;
+}
