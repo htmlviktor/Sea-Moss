@@ -1,6 +1,6 @@
 .nav {
     position: absolute;
-    top: 0;
+    top: 50px;
     left: calc(50% + 300px);
     z-index: 1;
 }
@@ -12,4 +12,23 @@
 
 .nav__link {
     color: #ffffff;
+}
+
+.nav__list-item {
+    margin-right: 30px;
+    &--active {
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 75%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 1px;
+            background: white;
+            display: block;
+            position: absolute;
+            bottom: -2px;
+        }
+    }
 }
