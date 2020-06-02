@@ -1,0 +1,28 @@
+.recipes {
+    display: flex;
+    align-items: center;
+}
+
+.recipes__list {
+    @include reset-list;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3%;
+}
+
+.recipes__list-item {
+    position: relative;
+
+    div {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgba(118, 247, 191, 0.9);
+        padding: 16px;
+
+        span {
+            font-weight: 300;
+            font-size: 17px;
+        }
+    }
+}

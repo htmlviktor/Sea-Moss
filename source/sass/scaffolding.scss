@@ -10,11 +10,6 @@ body {
   line-height: 24px;
 
   background-color: #ffffff;
-
-  @media (min-width: $desktop-large-width + 1) {
-    font-size: 30px;
-    line-height: 34px;
-  }
 }
 
 h1  {
@@ -55,27 +50,6 @@ html {
   box-sizing: inherit;
 }
 
-.button {
-  display: block;
-  text-align: center;
-  background-color: #000000;
-  color: #ffffff;
-  font-size: 15px;
-  line-height: 18px;
-  padding: 16px 38px;
-
-  @media (min-width: $desktop-large-width + 1) {
-    font-size: 20px;
-    padding: 25px 38px;
-  }
-}
-
-.slide {
-  height: 100vh;
-  box-sizing: border-box;
-  min-height: 720px;
-  position: relative;
-}
 
 //Глобальный фон для всех секций
 .section {
@@ -83,6 +57,12 @@ html {
   background-size: cover;
 }
 
+.title {
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 70px;
+  text-align: center;
+}
 //Описываем контейнер
 
 .container {
@@ -93,16 +73,6 @@ html {
 @media (max-width: $desktop-width) {
   .container {
     max-width: $laptop-width-container;
-  }
-
-  .slide {
-    min-height: 768px;
-  }
-
-  .button {
-    font-size: 13px;
-    line-height: 16px;
-    padding: 15px 38px;
   }
 }
 

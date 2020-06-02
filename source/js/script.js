@@ -1,8 +1,19 @@
 import fullpage from 'fullpage.js';
 import Swiper from 'swiper';
 
+const navLinks = document.querySelectorAll('.nav__link');
+
 const colorizeSlides = (index) => {
-    switch (index) {
+    if(index !== 0) {
+        navLinks.forEach(el => {
+            el.style.color = 'black';
+        })
+    } else {
+        navLinks.forEach(el => {
+            el.style.color = 'white';
+        })
+    }
+     switch (index) {
         case 0:
             $('.fp-tooltip').css('color', '#333');
             $('#fp-nav span').css('background', '#333');

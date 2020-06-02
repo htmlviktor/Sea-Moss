@@ -1,0 +1,64 @@
+.testimonials {
+    display: flex;
+    align-items: center;
+}
+
+.slider__item {
+    display: none;
+    padding: 40px 40px 70px 40px;
+    text-align: center;
+    max-width: 800px;
+    background: #76f7bf;
+
+    &--active {
+        display: block;
+    }
+}
+
+.slider__item-descr {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.slider__item-title {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.slider__item-stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider__item-star {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background-image: url('../img/star.svg');
+    background-size: cover;
+}
+
+.slider__button {
+    width: 80px;
+    height: 37px;
+    border: none;
+    background-color: transparent;
+    background-image: url('../img/arrow.svg');
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &--prev {
+        transform: rotate(180deg);
+        left: 10%;
+    }
+
+    &--next {
+        right: 10%;
+    }
+}
