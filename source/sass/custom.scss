@@ -7,8 +7,9 @@
     display: flex;
     background: rgba(0,0,0,0);
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     transition: all 0.2s;
+    transform: translateY(-50px);
 
     ul li a span {
         width: 10px;

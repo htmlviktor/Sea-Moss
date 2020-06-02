@@ -5,6 +5,49 @@
     z-index: 1;
 }
 
+.nav-white {
+    .nav__link {
+        color: #ffffff;
+    }
+}
+
+.nav-black {
+    .nav__link {
+        color: black;
+        transition: all 0.2s;
+    }
+
+    .nav__list-item {
+        &:hover {
+            &::before {
+                content: "";
+                width: 75%;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 1px;
+                background: black;
+                display: block;
+                position: absolute;
+                bottom: -2px;
+                transition: all 0.3s;
+            }
+        }
+        &--active {
+            &::before {
+                background: black;
+            }
+            &:hover {
+                &::before {
+                    left: 0;
+                    transform: none;
+                    width: 50%;
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+}
+
 .nav__list {
     @include reset-list;
     display: flex;
@@ -14,10 +57,39 @@
     color: #ffffff;
     font-size: 25px;
     font-weight: 400;
+    transition: all 0.2s;
 }
 
 .nav__list-item {
     margin-right: 30px;
+    transition: all 0.2s;
+    position: relative;
+    &::before {
+        content: "";
+        width: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 1px;
+        background: white;
+        display: block;
+        position: absolute;
+        bottom: -2px;
+        transition: all 0.3s;
+    }
+    &:hover {
+        &::before {
+            content: "";
+            width: 75%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 1px;
+            background: white;
+            display: block;
+            position: absolute;
+            bottom: -2px;
+            transition: all 0.3s;
+        }
+    }
     &--active {
         position: relative;
 
@@ -31,6 +103,16 @@
             display: block;
             position: absolute;
             bottom: -2px;
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            &::before {
+                left: 0;
+                transform: none;
+                width: 50%;
+                transition: all 0.3s;
+            }
         }
     }
 }
