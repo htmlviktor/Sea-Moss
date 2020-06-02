@@ -1,12 +1,13 @@
 .testimonials__wrapper {
     margin-top: 14vh;
+    position: relative;
 }
 
 .slider__item {
-    display: none;
+    
     padding: 40px 40px 70px 40px;
     text-align: center;
-    max-width: 800px;
+    // max-width: 800px;
     background: #76f7bf;
     margin: auto;
     &--active {
@@ -43,7 +44,7 @@
 }
 
 .slider__button {
-    width: 80px;
+    width: 85px;
     height: 37px;
     border: none;
     background-color: transparent;
@@ -51,26 +52,31 @@
     background-size: cover;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    // transform: translateY(-50%);
     cursor: pointer;
     transition: all 0.2s;
-
+    z-index: 1;
+    outline: none;
     &--prev {
-        transform: rotate(180deg) translateY(25%);
-        left: 10%;
+        transform: rotate(180deg) translateY(-25%);
+        left: -5%;
         &:hover {
-            transform: translateX(-15px) rotate(180deg) translateY(25%);
+            transform: translateX(-15px) rotate(180deg) translateY(-25%);
             transition: all 0.2s;
             opacity: 0.6;
         }
     }
 
     &--next {
-        right: 10%;
+        right: -5%;
         &:hover {
-            transform: translateX(15px) translateY(-50%);
+            transform: translateX(15px);
             transition: all 0.2s;
             opacity: 0.6;
         }
     }
+}
+
+.testimonials__swiper-wrapper {
+    max-width: 940px;
 }

@@ -58,3 +58,34 @@ const colorizeSlides = (index) => {
     }
 
 });
+
+
+const testimonialsSlider = new Swiper('.swiper-container', {
+    centeredSlides: true,
+    slidesPerView: 1.15,
+    loop: true,
+    spaceBetween: 0,
+    effect: 'coverflow',
+    coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 250,
+        modifier: 1,
+        slideShadows: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    }
+})
+
+const sliderBtnPrev = document.querySelector('.slider__button--prev');
+const sliderBtnNext = document.querySelector('.slider__button--next');
+
+sliderBtnPrev.addEventListener('click', evt => {
+    testimonialsSlider.slidePrev();
+})
+
+sliderBtnNext.addEventListener('click', evt => {
+    testimonialsSlider.slideNext();
+})
