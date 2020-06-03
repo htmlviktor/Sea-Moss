@@ -99,11 +99,11 @@ gulp.task("compress", function() {
       module: {
         rules: [
           {
-            test: /\.(js)$/,
+            test: /\.(js|jsx)$/,
             exclude: /(node_modules)/,
             loader: 'babel-loader',
             query: {
-              presets: ['@babel/preset-env']
+              presets: ['@babel/preset-react']
             }
           }
         ]
