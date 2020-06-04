@@ -14,6 +14,15 @@ benefitsElements.forEach(element => {
     })
 })
 
+const setCustomColor = (textColor = 'white', color = 'transparent') => {
+    $('#fp-nav span').each((_, el) => {
+        el.style.background = color;
+    })
+    $('.fp-tooltip').each((_, el) => {
+        el.style.color = textColor;
+    })
+}
+
 const colorizeSlides = (index) => {
     if(index !== 0) {
         navElement.classList.remove('nav-white');
@@ -22,28 +31,16 @@ const colorizeSlides = (index) => {
         navElement.classList.remove('nav-black')
         navElement.classList.add('nav-white');
     }
-    //  switch (index) {
-    //     case 0:
-    //         $('.fp-tooltip').css('color', '#333');
-    //         $('#fp-nav span').css('background', '#333');
-    //         break;
-    //     case 1:
-    //         $('.fp-tooltip').css('color', 'white');
-    //         $('#fp-nav span').css('background', 'white');
-    //         break;
-    //     case 2:
-    //         $('.fp-tooltip').css('color', '#333');
-    //         $('#fp-nav span').css('background', '#333');
-    //         break;
-    //     case 3:
-    //         $('.fp-tooltip').css('color', 'white');
-    //         $('#fp-nav span').css('background', 'white');
-    //         break;
-    //     default:
-    //         $('.fp-tooltip').css('color', 'white');
-    //         $('#fp-nav span').css('background', 'white');
-    //         break;
-    // }
+     switch (index) {
+        case 0:
+            setCustomColor()
+            $('#fp-nav .active span').css('background', 'white');
+            break;
+        default:
+            setCustomColor('#499167');
+            $('#fp-nav .active span').css('background', '#499167');
+            break;
+    }
 }
 
 
