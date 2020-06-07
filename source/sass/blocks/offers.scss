@@ -78,3 +78,30 @@
         object-fit: contain;
     }
 }
+
+@media (max-width: $desktop-width) {
+    .offer__title {
+        font-size: 35px;
+        line-height: 41px;
+    }
+    .offer__descr {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .offer__link {
+        font-size: 25px;
+        line-height: 29px;
+    }
+
+    .offer__price {
+        font-size: 50px;
+        line-height: 59px;
+        &--old {
+            margin-right: 10px;
+        }
+    }
+    .offer__list-item {
+        width: 120px;
+        height: 120px;
+    }
+}

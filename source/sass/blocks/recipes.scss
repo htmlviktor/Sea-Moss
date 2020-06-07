@@ -11,7 +11,13 @@
 
 .recipes__list-item {
     position: relative;
+    display: flex;
+    cursor: pointer;
+    transition: all 0.2s;
 
+    &:hover {
+        transform: scale(1.08);
+    }
     div {
         position: absolute;
         bottom: 0;
@@ -23,5 +29,18 @@
             font-weight: 300;
             font-size: 17px;
         }
+    }
+}
+
+@media (max-width: $desktop-width) {
+    .recipes__list {
+        gap: 25px;
+    }
+    .recipes__list-item div {
+        padding: 4px;
+    }
+
+    .recipes__list-item div span {
+        font-size: 14px;
     }
 }

@@ -64,7 +64,13 @@ html {
   margin-bottom: 5vh;
   text-align: center;
 }
-//Описываем контейнер
+
+@media (max-width: $desktop-width) {
+  .title {
+    font-size: 40px;
+  }
+}
+
 
 .container {
   max-width: $desktop-width-container;

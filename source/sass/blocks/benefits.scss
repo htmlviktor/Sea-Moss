@@ -14,11 +14,11 @@
     @include reset-list;
     margin-top: 50px;
     p {
-     font-size: 22px;
-     line-height: 26px;
-     opacity: 0.8;   
-     margin: 0;
-     margin-left: 22px;
+        font-size: 22px;
+        line-height: 26px;
+        opacity: 0.8;
+        margin: 0;
+        margin-left: 22px;
     }
 }
 
@@ -77,6 +77,22 @@
                 width: 30%;
                 transition: all 0.4s;
             }
+        }
+    }
+}
+
+@media (max-width: $desktop-width) {
+    .benefits__info p {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .benefits__info img {
+        width: 51%;
+    }
+    .benefits__nav-link {
+        font-size: 20px;
+        &--active {
+            font-size: 32px;
         }
     }
 }

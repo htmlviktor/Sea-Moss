@@ -80,3 +80,18 @@
 .testimonials__swiper-wrapper {
     max-width: 940px;
 }
+
+@media (max-width: $desktop-width) {
+    .slider__item-title {
+        font-size: 25px;
+    }   
+    .slider__item-star {
+        width: 35px;
+        height: 35px;
+    }
+
+    .slider__item-descr {
+        font-size: 20px;
+        line-height: 23px;
+    }
+}
