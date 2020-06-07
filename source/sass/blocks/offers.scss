@@ -67,16 +67,27 @@
     margin-bottom: 10px;
     cursor: pointer;
     transition: all 0.2s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     &:hover {
         transform: scale(1.05);
         transition: all 0.2s;
         opacity: 0.7;
     }
     img {
-        width: 100%;
-        height: 100%;
+        width: 80px;
+        height: 105px;
         object-fit: contain;
     }
+}
+
+.offer__item-cost {
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
 }
 
 @media (max-width: $desktop-width) {
@@ -103,5 +114,20 @@
     .offer__list-item {
         width: 120px;
         height: 120px;
+    }
+
+    .offer__item-cost {
+        font-size: 14px;
+        font-weight: 700;
+        display: block;
+    }
+
+    .offer__list-item img {
+        height: 82px;
+    }
+
+    .offers__container {
+        grid-template-columns: 765px 120px;
+        gap: 60px;
     }
 }

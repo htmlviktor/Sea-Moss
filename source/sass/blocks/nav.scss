@@ -116,3 +116,12 @@
         }
     }
 }
+
+@media (max-width: $desktop-width) {
+    // .nav {
+    //     left: calc(50% + 210px);
+    // }
+    .nav__link {
+        font-size: 20px;
+    }
+}

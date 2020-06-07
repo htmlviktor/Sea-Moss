@@ -4,7 +4,6 @@
 }
 
 .slider__item {
-    
     padding: 40px 40px 70px 40px;
     text-align: center;
     // max-width: 800px;
@@ -84,7 +83,7 @@
 @media (max-width: $desktop-width) {
     .slider__item-title {
         font-size: 25px;
-    }   
+    }
     .slider__item-star {
         width: 35px;
         height: 35px;
@@ -93,5 +92,19 @@
     .slider__item-descr {
         font-size: 20px;
         line-height: 23px;
+    }
+    .testimonials__swiper-wrapper {
+        max-width: 720px;
+    }
+    .slider__button {
+        width: 60px;
+        height: 27px;
+
+        &--next {
+            right: 0;
+        }
+        &--prev {
+            left: 0;
+        }
     }
 }

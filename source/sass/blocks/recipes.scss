@@ -14,7 +14,7 @@
     display: flex;
     cursor: pointer;
     transition: all 0.2s;
-
+    height: 260px;
     &:hover {
         transform: scale(1.08);
     }
@@ -35,6 +35,9 @@
 @media (max-width: $desktop-width) {
     .recipes__list {
         gap: 25px;
+    }
+    .recipes__list-item {
+        height: 200px;
     }
     .recipes__list-item div {
         padding: 4px;
