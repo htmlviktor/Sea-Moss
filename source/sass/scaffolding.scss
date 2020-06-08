@@ -91,6 +91,7 @@ html {
 
 @media (max-width: $tablet-width) {
   .container {
+    padding: 0 15px;
     max-width: $mobile-width-container;
   }
 }

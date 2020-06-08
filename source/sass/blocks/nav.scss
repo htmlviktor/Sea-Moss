@@ -117,11 +117,32 @@
     }
 }
 
+.nav__toggle {
+    display: none;
+}
+
 @media (max-width: $desktop-width) {
     // .nav {
     //     left: calc(50% + 210px);
     // }
+    .nav__toggle {
+        display: block;
+    }
     .nav__link {
         font-size: 20px;
+    }   
+
+    .nav {
+        left: 15px;
+    }
+
+    .nav__list {
+        display: none;
+    }
+
+    .nav__toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 }

@@ -47,3 +47,9 @@
         font-size: 14px;
     }
 }
+
+@media (max-width: $tablet-width) {
+    .recipes__list {
+        grid-template-columns: 1fr;
+    }
+}

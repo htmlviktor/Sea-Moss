@@ -59,7 +59,7 @@ const colorizeSlides = (index) => {
 
 const testimonialsSlider = new Swiper('.swiper-container', {
     centeredSlides: true,
-    slidesPerView: 1.15,
+    slidesPerView: 1,
     loop: true,
     spaceBetween: 0,
     effect: 'coverflow',
@@ -73,6 +73,11 @@ const testimonialsSlider = new Swiper('.swiper-container', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 1.15
+        }
     }
 })
 
