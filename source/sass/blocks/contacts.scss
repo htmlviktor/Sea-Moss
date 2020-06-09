@@ -66,7 +66,7 @@
 
     &:hover {
         opacity: 0.6;
-        transition: all 0.2s;    
+        transition: all 0.2s;
     }
 }
 
@@ -88,5 +88,11 @@
                 opacity: 0.2;
             }
         }
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .contact-us__copyright {
+        display: none;
     }
 }
