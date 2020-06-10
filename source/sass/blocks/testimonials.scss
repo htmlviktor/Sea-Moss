@@ -1,5 +1,6 @@
 .testimonials__wrapper {
-    margin-top: 14vh;
+    margin-top: 50vh;
+    transform: translateY(-55%);
     position: relative;
 }
 
@@ -106,6 +107,12 @@
         &--prev {
             left: 0;
         }
+    }
+}
+
+@media (max-width: $laptop-width) {
+    .slider__button {
+        display: none;
     }
 }
 

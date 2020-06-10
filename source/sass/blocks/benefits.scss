@@ -1,5 +1,6 @@
 .benefits__wrapper {
-    margin-top: 14vh;
+    margin-top: 50vh;
+    transform: translateY(-55%);
 }
 
 .benefits__nav {
@@ -70,14 +71,14 @@
             transition: all 0.4s;
         }
 
-        &:hover {
-            &::before {
-                left: 0;
-                transform: none;
-                width: 30%;
-                transition: all 0.4s;
-            }
-        }
+        // &:hover {
+        //     &::before {
+        //         left: 0;
+        //         transform: none;
+        //         width: 30%;
+        //         transition: all 0.4s;
+        //     }
+        // }
     }
 }
 
@@ -94,5 +95,11 @@
         &--active {
             font-size: 32px;
         }
+    }
+}
+
+@media (max-width: $laptop-width) {
+    .benefits__wrapper {
+        display: none;
     }
 }

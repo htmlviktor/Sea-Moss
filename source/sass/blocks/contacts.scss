@@ -3,7 +3,8 @@
 }
 
 .contact-us__wrapper {
-    margin-top: 14vh;
+    margin-top: 50vh;
+    transform: translateY(-55%);
 }
 
 .contacts-us__form {
@@ -94,5 +95,11 @@
 @media (max-width: $tablet-width) {
     .contact-us__copyright {
         display: none;
+    }
+    .contact-us__submit-wrapper {
+        margin-top: 20px;
+    }
+    .contacts-us__form textarea {
+        height: 142px;
     }
 }

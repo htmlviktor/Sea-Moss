@@ -60,28 +60,28 @@
 .header__wrapper,
 .services__parallax-wrapper,
 .story__parallax-wrapper {
-    transform: translateY(-30%);
+    transform: translateY(-55%);
     transition: all 1s;
 }
 
-.active {
-    .benefits__wrapper {
-        transform: translateY(0%);
-        transition: all 0.8s;
-    }
-    .header__wrapper {
-        transform: translateY(0%);
-        transition: all 0.8s;
-    }
-    .services__parallax-wrapper {
-        transform: translateY(0%);
-        transition: all 0.8s;
-    }
-    .story__parallax-wrapper {
-        transform: translateY(0%);
-        transition: all 0.8s;
-    }
-}
+// .active {
+//     .benefits__wrapper {
+//         transform: translateY(0%);
+//         transition: all 0.8s;
+//     }
+//     .header__wrapper {
+//         transform: translateY(0%);
+//         transition: all 0.8s;
+//     }
+//     .services__parallax-wrapper {
+//         transform: translateY(0%);
+//         transition: all 0.8s;
+//     }
+//     .story__parallax-wrapper {
+//         transform: translateY(0%);
+//         transition: all 0.8s;
+//     }
+// }
 
 .testimonials {
     .swiper-slide {

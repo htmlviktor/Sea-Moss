@@ -122,16 +122,16 @@
 }
 
 @media (max-width: $desktop-width) {
-    // .nav {
-    //     left: calc(50% + 210px);
-    // }
-    .nav__toggle {
-        display: block;
+    .nav {
+        left: calc(50% + 235px);
     }
+   
     .nav__link {
         font-size: 20px;
     }   
+}
 
+@media (max-width: $laptop-width) {
     .nav {
         left: 15px;
     }
@@ -144,5 +144,9 @@
         background: none;
         border: none;
         cursor: pointer;
+    }
+
+    .nav__toggle {
+        display: block;
     }
 }

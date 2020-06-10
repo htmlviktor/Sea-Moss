@@ -77,7 +77,7 @@ export default class HomePage {
     }
 
     _initSwiperSlider() {
-        const testimonialsSlider = new Swiper('.swiper-container', {
+        const testimonialsSlider = new Swiper('.testimonials__swiper-wrapper', {
             centeredSlides: true,
             slidesPerView: 1,
             loop: true,
@@ -111,7 +111,28 @@ export default class HomePage {
         sliderBtnNext.addEventListener('click', evt => {
             testimonialsSlider.slideNext();
         })
+
+        if (window.innerWidth <= 800) {
+            const recipesSlider = new Swiper('.swiper-init-recipes', {
+                slidesPerView: 1,
+                slidesPerColumn: 2,
+                spaceBetween: 20,
+                pagination: {
+                    el: '.swiper-pagination-recipes',
+                    clickable: true,
+                },
+                breakpoints: {
+                    700: {
+                        slidesPerView: 2,
+                    }
+                }
+            })
+        } else {
+            document.querySelector('.recipes .swiper-container').classList.remove('swiper-container');
+        }
     }
+
+
 }
 
 

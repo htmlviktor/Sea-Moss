@@ -64,13 +64,19 @@ html {
   font-size: 50px;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 5vh;
+  margin-bottom: 7vh;
   text-align: center;
 }
 
 @media (max-width: $desktop-width) {
   .title {
     font-size: 40px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .title {
+    font-size: 24px;
   }
 }
 
