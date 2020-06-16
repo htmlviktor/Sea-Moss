@@ -121,6 +121,10 @@
     display: none;
 }
 
+.nav__inner-list {
+    display: none;
+}
+
 @media (max-width: $desktop-width) {
     .nav {
         left: calc(50% + 235px);

@@ -8,6 +8,7 @@ export default class HomePage {
 
         this._navElement = document.querySelector('.nav');
         this._benefitsElements = document.querySelectorAll('.benefits__nav-link');
+        this._benefitsInfoElements = document.querySelectorAll('.benefits__info-item');
 
         this._colorizeSlides = this._colorizeSlides.bind(this);
     }
@@ -22,15 +23,32 @@ export default class HomePage {
     }
 
     _setBenefitsListeners() {
-        this._benefitsElements.forEach(element => {
+        const closeModalHandler = (evt) => {
+            evt.target.parentElement.classList.remove('benefits__info-item--active');
+            evt.target.removeEventListener('click', closeModalHandler);
+        }
+        
+        this._benefitsElements.forEach((element, i) => {
             element.addEventListener('click', evt => {
                 evt.preventDefault();
-                this._benefitsElements.forEach(el => {
+                this._benefitsElements.forEach((el, i) => {
                     el.classList.remove('benefits__nav-link--active')
+                    this._benefitsInfoElements[i].classList.remove('benefits__info-item--active')
                 })
                 element.classList.add('benefits__nav-link--active')
+                this._benefitsInfoElements[i].classList.add('benefits__info-item--active')
+                this._benefitsInfoElements[i]
+                    .querySelector('.benefits__info-close')
+                    .addEventListener('click', closeModalHandler)
             })
         })
+
+        if (window.innerWidth < 768) {
+            this._benefitsInfoElements.forEach(el => {
+                el.classList.remove('benefits__info-item--active')
+            })
+        }
+
     }
 
     _setCustomColor(textColor = 'white', color = 'transparent') {
@@ -70,6 +88,7 @@ export default class HomePage {
             navigationPosition: 'left',
             navigationTooltips: ['Home', 'History', 'Recipes', 'Testimonials', 'Special Offers', 'Contact Us'],
             verticalCentered: false,
+            normalScrollElements: '.benefits__info-item',
             afterLoad(origin, destination, direction) {
                 colorizeSlides(destination.index)
             }

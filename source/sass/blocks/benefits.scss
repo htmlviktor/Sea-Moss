@@ -82,6 +82,14 @@
     }
 }
 
+.benefits__info-title {
+    display: none;
+}
+
+.benefits__info-close {
+    display: none;
+}
+
 @media (max-width: $desktop-width) {
     .benefits__info p {
         font-size: 18px;
@@ -99,7 +107,94 @@
 }
 
 @media (max-width: $laptop-width) {
-    .benefits__wrapper {
+    .benefits__nav-link {
+        font-size: 14px;
+
+        &--active {
+            font-size: 21px;
+        }
+    }
+
+    .benefits__info {
+        img {
+            width: 48%;
+        }
+
+        p {
+            width: 52%;
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+}
+
+@media (max-width: $tablet-width) {
+    .benefits__info-title {
+        display: block;
+    }
+    .benefits__info-item {
         display: none;
+        &--active {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            flex-direction: column;
+            background: #76f7bf;
+            width: 95%;
+            transform: translateX(-50%);
+        }
+    }
+    .benefits__info-title {
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    .benefits__nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    .benefits__nav-link {
+        font-size: 20px;
+        padding: 12px;
+        background: #76f7bf;
+        display: block;
+        &--active {
+            &::before {
+                content: none;
+            }
+        }
+    }
+    .benefits__nav-item {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .benefits__info-close {
+        display: block;
+        position: absolute;
+        background-image: url("../img/icons/close-menu-black.svg");
+        width: 27px;
+        height: 27px;
+        top: 15px;
+        right: 15px;
+        border: none;
+        background-size: cover;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: 50%;
+    }
+    .benefits__info {
+        p {
+            font-size: 12px;
+            line-height: 15px;
+            margin: 0;
+            padding: 10px;
+            width: 100%;
+            max-height: 220px;
+            overflow-y: scroll;
+        }
+        img {
+            width: 100%;
+        }
     }
 }
