@@ -3,6 +3,10 @@
     transform: translateY(-55%);
 }
 
+.recipes {
+    position: relative;
+}
+
 .recipes__list {
     @include reset-list;
     display: grid;
@@ -30,6 +34,43 @@
             font-weight: 300;
             font-size: 17px;
         }
+    }
+}
+
+.recipes__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    max-width: 33%;
+    background: #76F7BF;
+    display: none;
+    h3 {
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    &--show {
+        display: block;
+    }
+
+    &-close {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: rgba(255,255,255, 0.8);
+        background-image: url("../img/icons/close-menu-black.svg");
+        background-size: 80%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        border: none;
+        background-position: 50%;
     }
 }
 

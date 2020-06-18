@@ -9,7 +9,8 @@ export default class HomePage {
         this._navElement = document.querySelector('.nav');
         this._benefitsElements = document.querySelectorAll('.benefits__nav-link');
         this._benefitsInfoElements = document.querySelectorAll('.benefits__info-item');
-
+        this._recipesList = document.querySelectorAll('.recipes__list-item');
+        
         this._colorizeSlides = this._colorizeSlides.bind(this);
     }
 
@@ -19,6 +20,7 @@ export default class HomePage {
             this._initSwiperSlider();
 
             this._setBenefitsListeners();
+            this._setRecipesListeners();
         }
     }
 
@@ -93,6 +95,29 @@ export default class HomePage {
                 colorizeSlides(destination.index)
             }
         });
+
+        const innerNavigationLinks = document.querySelectorAll('.nav__inner-item a');
+        innerNavigationLinks.forEach((el, i) => {
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                fullpage_api.moveTo(i + 2);
+            })
+        })
+    }
+
+    _setRecipesListeners() {
+        const modal = document.querySelector('.recipes__modal');
+        const modalClose = document.querySelector('.recipes__modal-close');
+
+        this._recipesList.forEach((el, i) => {
+            el.addEventListener('click', () => {
+                modal.classList.add('recipes__modal--show')
+            })
+        })
+
+        modalClose.addEventListener('click', () => {
+            modal.classList.remove('recipes__modal--show');
+        })
     }
 
     _initSwiperSlider() {

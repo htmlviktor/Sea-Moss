@@ -225,4 +225,33 @@
             background-image: url("../img/icons/burger-black.svg");
         }
     }
+
+    .nav__list-item {
+        &--active {
+            &::before {
+                content: none;
+            }
+        }
+    }
+
+    .nav-black .nav__list-item--active:hover::before {
+        content: none;
+    }
+
+    .nav-white .nav__list-item--active:hover::before {
+        content: none;
+    }
+
+    .nav__inner-item {
+        margin-top: 20px;
+        a {
+            font-size: 22px;
+        }
+    }
+
+    .nav__inner-list {
+        display: block;
+        list-style: none;
+        padding-left: 8px;
+    }
 }

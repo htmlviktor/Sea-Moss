@@ -11,3 +11,4 @@ const navElement = document.querySelector('.nav');
 toggleMenu.addEventListener('click', () => {
     navElement.classList.toggle('nav--open')
 })
+
