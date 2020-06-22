@@ -43,7 +43,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    max-width: 33%;
+    width: 33%;
+    max-width: 500px;
     background: #76F7BF;
     display: none;
     h3 {
@@ -74,6 +75,10 @@
     }
 }
 
+.recipes__modal-text {
+    padding: 10px;
+}
+
 @media (max-width: $desktop-width) {
     .recipes__list {
         gap: 25px;
@@ -98,6 +103,16 @@
     .recipes__list-item div {
         font-size: 13px;
         padding: 8px;
+    }
+    .recipes__modal {
+        width: 100%;
+    }
+
+    .recipes__modal-text {
+        font-size: 14px;
+    }
+    .recipes__modal h3 {
+        font-size: 21px;
     }
 }
 
