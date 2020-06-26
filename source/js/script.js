@@ -1,6 +1,6 @@
 import HomePage from './pages/home-page';
 
-const homePage = new HomePage('.home-page');
+const homePage = new HomePage('.home');
 
 homePage.init()
 
