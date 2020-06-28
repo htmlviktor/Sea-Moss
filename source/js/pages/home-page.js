@@ -21,6 +21,8 @@ export default class HomePage {
 
             this._setBenefitsListeners();
             this._setRecipesListeners();
+        } else {
+            this._navElement.classList.add('nav-black');
         }
     }
 
