@@ -21,6 +21,7 @@ export default class HomePage {
 
             this._setBenefitsListeners();
             this._setRecipesListeners();
+            this._initSpecialOffers();
         } else {
             this._navElement.classList.add('nav-black');
         }
@@ -82,6 +83,20 @@ export default class HomePage {
                 $('#fp-nav .active span').css('background', '#499167');
                 break;
         }
+    }
+
+    _initSpecialOffers() {
+        const items = document.querySelectorAll('.offer__list-item');
+        const offers = document.querySelectorAll('.offers_wc-item');
+
+        items.forEach((el, i) => {
+            el.addEventListener('click', () => {
+                offers.forEach((el) => {
+                    el.classList.remove('offers_wc-item--active');
+                })
+                offers[i].classList.add('offers_wc-item--active');
+            })
+        })
     }
 
     _initFullPage() {
