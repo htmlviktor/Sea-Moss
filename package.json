@@ -40,7 +40,7 @@
   },
   "version": "16.0.0",
   "dependencies": {
-    "fullpage.js": "^3.0.8",
+    "fullpage.js": "^4.0.5",
     "swiper": "^5.4.1"
   }
 }
